@@ -1,11 +1,11 @@
 <template>
   <div>
-    home
+    right
   </div>
 </template>
 <script>
 export default {
-  name: 'Home',
+  name: 'RightBanner',
 
   data () {
     return {
@@ -17,5 +17,6 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+@import "~common/scss/var.scss";
 
 </style>
