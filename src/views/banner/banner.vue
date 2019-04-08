@@ -1,24 +1,32 @@
 <template>
-  <div class="banner-container">
-    <left-banner class="left-banner"></left-banner>
-    <right-banner class="right-banner"></right-banner>
-  </div>
+  <el-row class="banner-container">
+    <el-col :span="5">
+      <left-banner class="my-left-banner"></left-banner>
+    </el-col>
+    <el-col :span="19">
+      <right-banner class="my-right-banner"></right-banner>
+      <login></login>
+    </el-col>
+  </el-row>
 </template>
 <script>
 import LeftBanner from 'components/banner/left-banner'
 import RightBanner from 'components/banner/right-banner'
+import Login from 'components/banner/login'
 export default {
   name: 'Banner',
 
-  data () {
+  data() {
     return {
     }
   },
-
+  computed: {
+  },
   methods: {},
   components: {
     LeftBanner,
-    RightBanner
+    RightBanner,
+    Login
   }
 }
 </script>
@@ -26,13 +34,12 @@ export default {
 <style lang='scss' scoped>
 .banner-container {
   display: flex;
-
-  .left-banner {
-
+  flex-direction: row;
+  .my-left-banner {
+    height: 475px;
   }
 
-  .right-banner {
-
+  .my-right-banner {
   }
 }
 </style>
