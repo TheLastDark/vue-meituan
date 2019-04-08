@@ -132,7 +132,7 @@ export default {
   },
   computed: {
     curdetail: function () {
-      console.log(this.menu.filter(item => item.name === this.kind)[0])
+      // console.log(this.menu.filter(item => item.name === this.kind)[0])
       return this.kind ? this.menu.filter(item => item.name === this.kind)[0] : []
 
     }
@@ -214,6 +214,7 @@ export default {
   width: 400px;
   height: 475px;
   position: absolute;
+  z-index: 999;
   left: 100%;
   top: 0;
   background-color: #fff;

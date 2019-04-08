@@ -10,21 +10,30 @@
     </div>
     <div class="banner-box">
       <el-carousel height="240px" class="banner-wrap">
-        <el-carousel-item v-for="item in bannerImgs" :key="item">
+        <el-carousel-item v-for="item in bannerImgs" :key="item.id">
           <img :src="item.url" alt>
         </el-carousel-item>
       </el-carousel>
       <div class="item-pic"></div>
       <div class="default">
         <div class="header-img">
-          <img src="http://s0.meituan.net/bs/fe-web-meituan/2d05c2b/img/avatar.jpg" alt="">
+          <img src="http://s0.meituan.net/bs/fe-web-meituan/2d05c2b/img/avatar.jpg" alt>
         </div>
         <h4>Hi! 你好</h4>
         <div class="button">注册</div>
         <div class="button">登陆</div>
       </div>
     </div>
-    <div class="bd-wrap"></div>
+    <div class="bd-wrap">
+      <div class="bd-1 bd"></div>
+      <div class="bd-2 bd"></div>
+      <div class="bd-3 bd"></div>
+      <div class="qrcode">
+        <img src="//s1.meituan.net/bs/fe-web-meituan/60ac9a0/img/download-qr.png" alt="">
+        <h4>美团App手机版</h4>
+        <span><b>一元起</b>吃喝玩乐</span>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -86,25 +95,25 @@ export default {
   .banner-box {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     .banner-wrap {
       width: 550px;
 
       img {
         width: 100%;
-        height: 100%;
+        height: auto;
       }
     }
     .item-pic {
       background-image: url(http://p0.meituan.net/codeman/e473bb428f070321269b23370ff02ba956209.jpg);
       width: 150px;
       height: 240px;
-      margin: 0 10px;
       background-size: 150px;
     }
 
     .default {
       padding-top: 30px;
-      width: 230px;
+      width: 212px;
       border: 1px solid #e5e5e5;
       box-sizing: border-box;
       height: 240px;
@@ -121,14 +130,14 @@ export default {
           width: 47px;
           height: 47px;
           border-radius: 50%;
-          border: 4px solid #E5E5E5;
+          border: 4px solid #e5e5e5;
         }
       }
       .button {
         margin: 10px;
         border-radius: 20px;
         border: 1px solid #e5e5e5;
-        cursor:pointer;
+        cursor: pointer;
         width: 120px;
         height: 40px;
         text-align: center;
@@ -143,6 +152,63 @@ export default {
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
+      }
+    }
+  }
+
+  .bd-wrap {
+    display: flex;
+    flex-direction: row;
+    .bd {
+      margin: 10px 10px 0 0;
+    }
+    .bd-1 {
+      width: 270px;
+      height: 165px;
+      background-image: url(http://p1.meituan.net/codeman/8cce56c467a17e04f3094d1e455462a0132772.png);
+      background-size: 270px;
+    }
+    .bd-2 {
+      width: 270px;
+      height: 165px;
+      background-image: url(http://p1.meituan.net/codeman/16442c19da1f1c4544f794e29d99c92051716.jpg);
+      background-size: 270px;
+    }
+    .bd-3 {
+      width: 150px;
+      height: 165px;
+      background-image: url(http://p1.meituan.net/codeman/5b21cddb4bb1cbc3a9c3bce0f726c75940469.jpg);
+      background-size: 150px;
+    }
+    .qrcode {
+      margin-top: 10px;
+      width: 212px;
+      border: 1px solid #e5e5e5;
+      height: 165px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+
+      img {
+        width: 95px;
+        height: 95px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      b {
+        font-size: 12px;
+        color: #ec5330;
+        padding-right: 10px;
+      }
+      span {
+        font-size: 12px;
       }
     }
   }
