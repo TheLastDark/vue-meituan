@@ -1,11 +1,11 @@
 <template>
   <div>
-    login
+    MyMainLove
   </div>
 </template>
 <script>
 export default {
-  name: 'RightBanner',
+  name: 'MyMainLove',
 
   data () {
     return {
@@ -17,6 +17,6 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-@import "~common/scss/var.scss";
+@import '~common/scss/var.scss';
 
 </style>

@@ -116,23 +116,12 @@ export default {
         }, {
           type: 'icon-meishi',
           name: '美食'
-        },
-        {
-          type: 'iconfont icon-shiwu',
-          name: '食物'
-        }, {
-          type: 'icon-jiudian',
-          name: '酒店'
-        }, {
-          type: 'icon-dianying',
-          name: '电影'
         }
       ]
     }
   },
   computed: {
     curdetail: function () {
-      // console.log(this.menu.filter(item => item.name === this.kind)[0])
       return this.kind ? this.menu.filter(item => item.name === this.kind)[0] : []
 
     }
@@ -144,7 +133,6 @@ export default {
       }, 150);
     },
     mouseenter(e) {
-      // console.log(e.target.querySelector('a').innerHTML)
       this.kind = e.target.querySelector('a').innerHTML
     }
   }
@@ -204,7 +192,7 @@ export default {
     li:hover {
       background-color: $-color-primary-light;
 
-      > i {
+      i {
         color: #fff;
       }
     }
@@ -212,11 +200,11 @@ export default {
 }
 .detail-container {
   width: 400px;
-  height: 475px;
+  height: 396px;
   position: absolute;
   z-index: 999;
   left: 100%;
-  top: 0;
+  top: 10px;
   background-color: #fff;
   color: $-color-text-sub;
   font-size: 12px;
@@ -249,7 +237,6 @@ export default {
         color: $-color-primary;
       }
     }
-
   }
 }
 </style>

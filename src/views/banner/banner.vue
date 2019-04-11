@@ -5,14 +5,12 @@
     </el-col>
     <el-col :span="19">
       <right-banner class="my-right-banner"></right-banner>
-      <login></login>
     </el-col>
   </el-row>
 </template>
 <script>
 import LeftBanner from 'components/banner/left-banner'
 import RightBanner from 'components/banner/right-banner'
-import Login from 'components/banner/login'
 export default {
   name: 'Banner',
 
@@ -25,8 +23,7 @@ export default {
   methods: {},
   components: {
     LeftBanner,
-    RightBanner,
-    Login
+    RightBanner
   }
 }
 </script>
@@ -36,7 +33,7 @@ export default {
   display: flex;
   flex-direction: row;
   .my-left-banner {
-    height: 475px;
+    height: 425px;
   }
 
   .my-right-banner {

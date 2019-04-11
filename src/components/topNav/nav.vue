@@ -168,7 +168,6 @@ export default {
   float: right;
   z-index: 999;
   color: $-color-text-sub;
-
   .nav {
     float: right;
     height: 40px;
